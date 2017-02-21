@@ -1,0 +1,21 @@
+{
+  "name":"test",
+  "transactionMode":"none",
+  "workspaces": {
+    "default":"default",
+    "cacheConfiguration": "infinispan.xml"
+  },
+  "storage" :
+  {
+    "cacheConfiguration" : "infinispan.xml",
+    "cacheName" : "repository",
+    "binaryStorage" :
+    {
+      "dataCacheName":"binaries",
+      "metadataCacheName":"metadata",
+      "minimumBinarySizeInBytes" : 10000,
+      "minimumStringSize" : 999999999999,
+      "type" : "cache"
+    }
+  }
+}
