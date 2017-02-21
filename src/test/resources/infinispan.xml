@@ -6,7 +6,7 @@
     <cache-container default-cache="transient" statistics="false" >
         <jmx duplicate-domains="true"/>
         <local-cache name="transient" statistics="false" >
-            <locking acquire-timeout="2000" concurrency-level="1000" isolation="READ_COMMITTED"/>
+            <locking acquire-timeout="15000" concurrency-level="1000" isolation="READ_COMMITTED"/>
             <eviction max-entries="10000" strategy="LRU"/>
         </local-cache>
         <local-cache name="test/system"  />
@@ -17,7 +17,7 @@
     <cache-container default-cache="persistent" statistics="false">
         <jmx duplicate-domains="true"/>
         <local-cache name="persistent" statistics="false">
-            <locking acquire-timeout="2000" concurrency-level="1000" striping="true" isolation="READ_COMMITTED"/>
+            <locking acquire-timeout="15000" concurrency-level="1000" striping="true" isolation="READ_COMMITTED"/>
             <transaction mode="NON_XA" locking="OPTIMISTIC"/>
             <persistence passivation="false">
                 <file-store fetch-state="false"
